@@ -26,7 +26,6 @@ class Zeek < Formula
   def install
     mkdir "build" do
       system "cmake", "..", *std_cmake_args,
-                      "-DDISABLE_PYTHON_BINDINGS=on",
                       "-DBROKER_DISABLE_TESTS=on",
                       "-DBUILD_SHARED_LIBS=on",
                       "-DINSTALL_AUX_TOOLS=on",
